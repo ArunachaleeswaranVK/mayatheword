@@ -1,0 +1,13 @@
+<h1>Index page</h1>
+
+
+<% @posts.each do |post| %>
+
+<h3><%= link_to  post.title , post %></h3>
+
+<% end %>
+
+
+<br>
+
+<%= link_to "Create Post" , new_post_path %>
