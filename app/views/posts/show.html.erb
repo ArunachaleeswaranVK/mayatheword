@@ -8,6 +8,14 @@
 
 <p><%= @post.content %></p>
 
+<br>
+
+<% if @previous %>
+<%= link_to "Previous", @previous %>
+<% end %>
+<% if @next %>
+<%= link_to "Next", @next %>
+<% end %>
 
 <br>
 

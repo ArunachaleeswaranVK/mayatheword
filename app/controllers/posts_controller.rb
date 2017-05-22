@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
     
+    
     before_action :set_post , only: [:show,:edit,:update,:destroy] 
     
     def index
@@ -7,7 +8,8 @@ class PostsController < ApplicationController
     end
     
     def show
-        
+        @previous = Post.previous_post(params[:id])  
+        @next = Post.next_post(params[:id])
     end    
     
     def new
