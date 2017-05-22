@@ -8,6 +8,18 @@
 
 <p><%= @post.content %></p>
 
+<div>
+    <%= render "comments/comments" %>
+</div>
+
+
+<h3>Add Comment </h3>
+
+
+<div>
+    <%= render "comments/form" %>
+</div>
+
 <br>
 
 <% if @previous %>
