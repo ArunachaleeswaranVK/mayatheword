@@ -4,6 +4,9 @@ class Post < ActiveRecord::Base
     validates :title, presence: true, length: { minimum: 3}
     validates :content, presence: true
     
+    has_attached_file :image, styles: { medium: "700x500#", small: "350x250>" } 
+    validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+    
     def self.previous_post(previous_id)
         if previous_id
             where("id < ?", previous_id).order("id DESC").first 

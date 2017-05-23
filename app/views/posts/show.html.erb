@@ -1,12 +1,8 @@
-<h1>show page</h1>
-
-
-
 <h3><%= @post.title %></h3>
 
 <em>Submitted <%= time_ago_in_words(@post.created_at) %> Ago</em>
 
-<p><%= @post.content %></p>
+<p><%= raw @post.content %></p>
 
 <div>
     <%= render "comments/comments" %>

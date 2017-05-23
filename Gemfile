@@ -15,6 +15,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
+gem 'summernote-rails', '~> 0.8.3.0'
+
+gem 'paperclip', '~> 5.1'
+
 gem 'simple_form', '~> 3.5'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
