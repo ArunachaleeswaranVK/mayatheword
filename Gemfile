@@ -19,6 +19,8 @@ gem 'summernote-rails', '~> 0.8.3.0'
 
 gem 'paperclip', '~> 5.1'
 
+gem 'devise', '~> 4.3'
+
 gem 'simple_form', '~> 3.5'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

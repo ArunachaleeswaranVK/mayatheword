@@ -2,7 +2,20 @@
 
 <em>Submitted <%= time_ago_in_words(@post.created_at) %> Ago</em>
 
+
+
 <p><%= raw @post.content %></p>
+
+<br>
+
+<% if @previous %>
+    <%= link_to "Previous", @previous %>
+<% end %>
+<% if @next %>
+    <%= link_to "Next", @next %>
+<% end %>
+
+<br>
 
 <div>
     <%= render "comments/comments" %>
@@ -16,17 +29,14 @@
     <%= render "comments/form" %>
 </div>
 
-<br>
 
-<% if @previous %>
-<%= link_to "Previous", @previous %>
-<% end %>
-<% if @next %>
-<%= link_to "Next", @next %>
-<% end %>
+
+
 
 <br>
 
-<%= link_to "Home" , root_path %> |
-<%= link_to "Edit" , edit_post_path(@post) %> |
-<%= link_to "Delete" , post_path(@post) , method: :delete , data: {confirm: "Are you sure , Cherry ?"} %>
+
+<% if current_user.try(:admin?) %>
+    <%= link_to "Edit" , edit_post_path(@post) %> |
+    <%= link_to "Delete" , post_path(@post) , method: :delete , data: {confirm: "Are you sure , Cherry ?"} %>
+<% end %>    
