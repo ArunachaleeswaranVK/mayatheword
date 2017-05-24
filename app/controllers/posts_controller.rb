@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     before_action :authenticate_user! , except: [:index,:show,:upvote]
     
     def index
-        @posts = Post.all.order("CREATED_AT DESC")
+        @posts = Post.search(params[:search]).order("CREATED_AT DESC")
     end
     
     def show

@@ -18,5 +18,13 @@ class Post < ActiveRecord::Base
         if next_id
             where("id > ?", next_id).order(:id).first 
         end
-    end    
+    end
+    
+    def self.search(search)
+        if search
+            where(["title LIKE ?","%#{search}%"])
+        else
+            all.order("CREATED_AT DESC")
+        end 
+    end 
 end
