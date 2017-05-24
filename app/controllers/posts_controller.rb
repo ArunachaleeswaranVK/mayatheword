@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
     
     
-    before_action :set_post , only: [:show,:edit,:update,:destroy] 
+    before_action :set_post , only: [:show,:edit,:update,:destroy,:upvote]
+    before_action :authenticate_user! , except: [:index,:show,:upvote]
     
     def index
         @posts = Post.all.order("CREATED_AT DESC")
@@ -42,6 +43,13 @@ class PostsController < ApplicationController
         @post.destroy
         redirect_to root_path
     end
+    
+    def upvote
+        voter = guest_user
+        @post.upvote_by voter
+        
+        redirect_to :back
+    end    
     
     
     private

@@ -6,6 +6,15 @@
 
 <p><%= raw @post.content %></p>
 
+<% if current_user.try(:admin?) %>
+    <%= pluralize(@post.get_upvotes.size , "person") + " loved your writing" if (@post.get_upvotes.size > 0) %>
+<% else %>    
+    <%= link_to like_post_path(@post), method: :put do %>
+      Upvote
+      <%= @post.get_upvotes.size %>
+    <% end %>
+<% end %>    
+
 <br>
 
 <% if @previous %>
