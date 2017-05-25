@@ -12,8 +12,34 @@
  *
  *= require_tree .
  *= require_self
+ *= require comments
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "summernote";
+
+#comments-section{
+     display: none;
+}
+ol#comments{
+    font-size: 1.15em;
+    list-style-type:none;
+    padding: 0;
+  
+  li {
+      margin: 1em 0;
+      list-style-type:none;
+      
+      .date{
+          font-size: .8em;
+          font-weight: bold;
+          color: grey;
+      }
+      
+      p{
+          margin: 0;
+          font-size: .95em;
+      }
+  }
+}  

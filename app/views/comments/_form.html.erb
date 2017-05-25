@@ -1,15 +1,26 @@
     
-<%= simple_form_for([@post ,@post.comments.build]) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-group">
-    <%= f.input :commenter, input_html:{class:'form-control'} %>
-  </div>
-  <div class="form-group">
-    <%= f.input :body %>
-  </div>
-
-  <div class="form-group">
-    <%= f.button :submit, class:'btn btn-default' %>
-  </div>
+<%= simple_form_for([@post ,@post.comments.build], remote: true) do |f| %>
+  <fieldset>
+    <ol style="list-style-type:none">
+      <li>
+        <%= f.error_notification %>
+      </li>
+      <li>
+        <div class="form-group">
+          <%= f.input :commenter,  input_html:{class:'form-control'} %>
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <%= f.input :body ,rows: 2 , cols: 60 , placeholder: "wrtie a comment..."%>
+        </div>
+      </li>
+      <li>
+        <div class="form-group">
+          <%= f.button :submit, class:'btn btn-default' %>
+        </div>
+      </li>
+      
+    </ol>
+  </fieldset>
 <% end %>

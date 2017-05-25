@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     def show
         @previous = Post.previous_post(params[:id])  
         @next = Post.next_post(params[:id])
+        @comments = @post.comments
     end    
     
     def new

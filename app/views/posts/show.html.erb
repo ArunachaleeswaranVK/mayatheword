@@ -26,21 +26,20 @@
 
 <br>
 
-<div>
-    <%= render "comments/comments" %>
-</div>
+<p>
+    <%= link_to "comments" , "#" , id: "comments-link" %>
+</p>
 
-
-<h3>Add Comment </h3>
-
-
-<div>
-    <%= render "comments/form" %>
-</div>
-
-
-
-
+<section id="comments-section">
+    <ol id="comments">
+        <%= render @comments %>
+    </ol>    
+        <% unless current_user.try(:admin?) %>
+            <%= render "comments/form" %>
+        <% end %>
+    
+    
+</section>
 
 <br>
 
