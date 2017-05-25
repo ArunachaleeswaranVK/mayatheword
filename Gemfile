@@ -32,6 +32,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '< 5'
 
 gem 'social-share-button', '~> 0.1.6'
+
+gem 'impressionist'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

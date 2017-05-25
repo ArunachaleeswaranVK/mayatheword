@@ -2,7 +2,7 @@
 
 <em>Submitted <%= time_ago_in_words(@post.created_at) %> Ago</em>
 
-
+<strong><%= "#{@post.impressionist_count} views so far!" %></strong>
 
 <p><%= raw @post.content %></p>
 

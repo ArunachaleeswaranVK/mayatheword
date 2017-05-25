@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
     
     has_many :comments
     acts_as_votable
+    is_impressionable
     validates :title, presence: true, length: { minimum: 3}
     validates :content, presence: true
     
