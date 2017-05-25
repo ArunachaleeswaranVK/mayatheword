@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require summernote
+//= require social-share-button
 //= require_tree .
 
 

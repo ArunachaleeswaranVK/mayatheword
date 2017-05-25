@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require social-share-button
  *= require_self
  *= require comments
  */
@@ -43,3 +44,4 @@ ol#comments{
       }
   }
 }  
+
