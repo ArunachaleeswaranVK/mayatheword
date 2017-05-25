@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     put "like", to:"posts#upvote"
     
     end
-  end  
+  end 
+  
+  get '/about', to: 'pages#about'
   
   
   # You can have the root of your site routed with "root"

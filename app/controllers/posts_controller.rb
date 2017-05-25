@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     
-    # impressionist actions: [:show], unique: [:session_hash]
+    
     before_action :set_post , only: [:show,:edit,:update,:destroy,:upvote]
     before_action :authenticate_user! , except: [:index,:show,:upvote]
     
