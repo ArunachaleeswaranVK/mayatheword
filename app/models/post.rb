@@ -1,9 +1,10 @@
 class Post < ActiveRecord::Base
     
-    has_many :comments
+    has_many :comments ,dependent: :destroy
     acts_as_votable
     is_impressionable
     validates :title, presence: true, length: { minimum: 3}
+    validates :summary, presence: true, length: { maximum: 600 }
     validates :content, presence: true
     
     has_attached_file :image, styles: { medium: "700x500#", small: "350x250>" } 

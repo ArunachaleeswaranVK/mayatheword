@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170525093922) do
+ActiveRecord::Schema.define(version: 20170527090219) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "commenter"
@@ -65,6 +65,24 @@ ActiveRecord::Schema.define(version: 20170525093922) do
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
 
+  create_table "photos", force: :cascade do |t|
+    t.string   "photo_id"
+    t.string   "photo_filename"
+    t.integer  "photo_size"
+    t.string   "photo_content_type"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string   "image_id"
+    t.string   "image_filename"
+    t.integer  "image_size"
+    t.string   "image_content_type"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -75,6 +93,7 @@ ActiveRecord::Schema.define(version: 20170525093922) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "summary"
   end
 
   create_table "users", force: :cascade do |t|

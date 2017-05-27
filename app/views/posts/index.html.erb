@@ -1,9 +1,31 @@
-<% @posts.each do |post| %>
-<div class="container">
-   <%= link_to (image_tag post.image.url(:small)) , post %>
-   <h3><%= link_to  post.title , post %></h3> 
+<div id="banner">
+   
 </div>
-<% end %>
 
 <br>
+
+<div id="content">
+  <div class="container">
+    <% @posts.each do |post| %>
+        <div class="row">
+            <div class="col-xs-5 col-sm-6 col-lg-4">
+              <span class="img"><%= link_to (image_tag post.image.url(:small)) , post %></span>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-7 col-sm-6 col-lg-8">  
+              <h3><%= link_to  post.title , post %></h3> 
+              <p>
+                <%=  post.summary %>
+              </p>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+    <% end %>    
+  </div>  
+</div>
+
+
+
 
