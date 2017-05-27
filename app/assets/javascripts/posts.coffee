@@ -7,7 +7,16 @@ $ ->
     $(this).summernote()
         height: 200
         
+  
+  
+  $(document).ready ->
+  setTimeout (->
+    $('.alert_wrapper').fadeOut 'slow', ->
+      $(this).remove()
+      return
+    return
+  ), 2500
+  return
+  
   $(document).ready(ready)
   $(document).on('page:load', ready)
-  
-  

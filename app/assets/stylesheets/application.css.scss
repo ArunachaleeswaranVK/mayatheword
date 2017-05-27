@@ -20,8 +20,22 @@
 @import "bootstrap";
 @import "summernote";
 
+.alert_wrapper{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background: rgba(215, 134, 255, 0.7);
+    padding: 2.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
 body { 
-    padding-top: 65px; 
+    padding-top: 50px;
+    margin: 0px;
 }
 .img{
     width:  100px;
@@ -70,6 +84,29 @@ ol#comments{
     background: white;
     padding: 10px;
     
+}
+
+#heroine{
+    padding-top: 0px;
+    background-image: image-url('cherry.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -10;
+}
+
+#heroine-overlay{
+    padding-top: 0px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
 }
 
 
