@@ -63,11 +63,17 @@ body {
     font-size: 1em;
     transition: all ease .5s;
 }
+.navbar-collapse{
+    background-color: #222222;
+    
+}
+
 #nav.shrink {
     height: 60px;
     font-size: 1.20em;
     font-family: serif;
-    background-color: #2f2f63;
+    background-color: #222222;
+    // background-color: #2f2f63;
     border-color: #2f2f63;
     transition: all ease .5s;
 }

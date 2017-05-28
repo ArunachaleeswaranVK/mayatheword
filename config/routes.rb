@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     end
   end 
   
+  get '/search', to: 'posts#search'
   get '/about', to: 'pages#about'
   
   

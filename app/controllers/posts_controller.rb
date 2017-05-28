@@ -2,12 +2,16 @@ class PostsController < ApplicationController
     
     
     before_action :set_post , only: [:show,:edit,:update,:destroy,:upvote]
-    before_action :authenticate_user! , except: [:index,:show,:upvote]
+    before_action :authenticate_user! , except: [:index,:show,:upvote,:search]
     
     def index
         @posts = Post.search(params[:search]).order("CREATED_AT DESC")
        
     end
+    
+    def search
+        @posts = Post.search(params[:search]).order("CREATED_AT DESC")
+    end    
     
     def show
         @previous = Post.previous_post(params[:id])  
