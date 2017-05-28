@@ -25,6 +25,7 @@ class Post < ActiveRecord::Base
     def self.search(search)
         if search
             where(["title LIKE ?","%#{search}%"])
+            
         else
             all.order("CREATED_AT DESC")
         end 

@@ -6,6 +6,7 @@ class PostsController < ApplicationController
     
     def index
         @posts = Post.search(params[:search]).order("CREATED_AT DESC")
+       
     end
     
     def show

@@ -20,6 +20,9 @@
 @import "bootstrap";
 @import "summernote";
 
+
+
+
 .alert_wrapper{
     position: absolute;
     width: 100%;
@@ -36,6 +39,88 @@
 body { 
     padding-top: 50px;
     margin: 0px;
+    
+}
+.navbar-inverse{
+    height: 65px;
+    font-size: 1.5em;
+    padding-top: 10px;
+    z-index: 99999;
+    transition: all ease .5s;
+    // font-family: serif;
+    // background-color: #2f2f63;
+    // font-size: 1.5em;
+    // padding: 20px;
+    // border-color: #2f2f63;
+    // height: 70px;
+    // display: block;
+    // position: fixed;
+    // width: 100%;
+    z-index: 99999;
+    transition: all ease .5s;
+}
+.navbar-brand{
+    font-size: 1em;
+    transition: all ease .5s;
+}
+#nav.shrink {
+    height: 60px;
+    font-size: 1.20em;
+    font-family: serif;
+    background-color: #2f2f63;
+    border-color: #2f2f63;
+    transition: all ease .5s;
+}
+
+#nav.shrink #logo {
+   
+   font-size: 1.25em;
+  transition: all ease .5s;
+}
+#index-info{
+    font-style: italic;
+    color: #959dab;
+}
+#to_top{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 50px;
+}
+.info{
+    margin-bottom: 2em;
+    font-family: cursive;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    font-weight: bold;
+}
+.soc{
+    float: left;
+    margin-right: 1em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.social-share-button {
+  .ssb-icon {
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+  }
+}
+.like{
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    text-decoration: none;
+}
+.com{
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    text-align: center;
+}
+.next,.prev{
+    font-size: 1.5em;
 }
 .img{
     width:  100px;
@@ -64,7 +149,7 @@ ol#comments{
           font-size: .95em;
       }
   }
-}  
+} 
 
 #banner{
     width: 100%;
@@ -77,6 +162,9 @@ ol#comments{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#banner a{
+    
+}
 #content{
     width: 100%;
     position: relative;
@@ -84,6 +172,12 @@ ol#comments{
     background: white;
     padding: 10px;
     
+}
+
+.col-centered{
+float: none;
+margin: 0 auto;
+
 }
 
 #heroine{
