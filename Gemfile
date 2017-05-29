@@ -25,6 +25,8 @@ gem 'simple_form', '~> 3.5'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'animate.css-rails', '~> 3.2.0'
+
 gem 'jquery-turbolinks', '~> 2.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
