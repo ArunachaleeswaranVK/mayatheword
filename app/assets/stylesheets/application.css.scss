@@ -41,48 +41,110 @@ body {
     margin: 0px;
     
 }
-.navbar-inverse{
-    height: 65px;
+nav.navbar-inverse{
+    height: 85px;
     font-size: 1.5em;
     padding-top: 10px;
     z-index: 99999;
     transition: all ease .5s;
+    color: #ffffff;
+    background-color: transparent;
+    border-color: transparent;
     // font-family: serif;
     // background-color: #2f2f63;
     // font-size: 1.5em;
     // padding: 20px;
-    // border-color: #2f2f63;
+    
     // height: 70px;
     // display: block;
     // position: fixed;
     // width: 100%;
-    z-index: 99999;
-    transition: all ease .5s;
+    
 }
 .navbar-brand{
-    font-size: 1em;
+    font-size: 1.15em;
     transition: all ease .5s;
 }
-.navbar-collapse{
-    background-color: #222222;
-    
+.navbar-inverse .navbar-brand{
+    color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
 }
 
 #nav.shrink {
     height: 60px;
-    font-size: 1.20em;
-    font-family: serif;
-    background-color: #222222;
+    background-color: rgba(21, 19, 19, 0.9);
+    padding-top: 5px;
+    // font-size: 1.20em;
+    // font-family: serif;
+    
     // background-color: #2f2f63;
-    border-color: #2f2f63;
+    // border-color: #2f2f63;
     transition: all ease .5s;
+}
+@media only screen and (max-width : 768px) {
+.navbar-collapse.collapse.in{
+    background-color: rgba(21, 19, 19, 0.9);
+    transition: all ease .5s;
+}
+
+
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+#nav{
+    background-color: rgba(21, 19, 19, 0.9);
+    transition: all ease .1s;
+}    
+.navbar-collapse.collapse.in{
+    background-color: rgba(21, 19, 19, 0.9);
+    transition: all ease .1s;
+}
+
+    
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+#nav{
+    background-color: rgba(21, 19, 19, 0.9);
+    transition: all ease .1s;
+}        
+.navbar-collapse.collapse.in{
+    background-color: rgba(21, 19, 19, 0.9);
+    transition: all ease .1s;
+}
+
+
+
 }
 
 #nav.shrink #logo {
    
    font-size: 1.25em;
-  transition: all ease .5s;
+   padding: 14px 0px 0px 0px;
+  transition: all ease .1s;
 }
+nav.shrink>li>a{
+    color: white;
+    font-size: 1em;
+    padding-top: 1.875em;
+}
+
+.social-line{
+    background-color: rgba(21, 19, 19, 0.9);
+    padding: 14px 0;
+    margin: -10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+
+
+
 #index-info{
     font-style: italic;
     color: #959dab;
@@ -159,10 +221,10 @@ ol#comments{
 
 #banner{
     width: 100%;
-    height: 500px;
+    height: 600px;
     position: fixed;
     display: block;
-    top: 50px;
+    top: 0px;
     background: url("http://cdn.wallpapersafari.com/52/71/K8S5LJ.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -174,7 +236,7 @@ ol#comments{
 #content{
     width: 100%;
     position: relative;
-    top: 400px;
+    top: 525px;
     background: white;
     padding: 10px;
     

@@ -58,6 +58,7 @@ class PostsController < ApplicationController
         voter = guest_user
         @post.upvote_by voter
         
+        
         redirect_to :back
     end    
     
