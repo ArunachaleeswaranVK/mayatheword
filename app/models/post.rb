@@ -33,5 +33,9 @@ class Post < ActiveRecord::Base
     
     def self.view_count(posts)
         return posts.sum(:view_count)
+    end
+    
+    def self.like_count(posts)
+        return posts.sum(:cached_votes_total)
     end    
 end
