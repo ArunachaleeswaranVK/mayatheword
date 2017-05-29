@@ -1,12 +1,12 @@
 <div class="container">
 
-<div class="title" id="title">
+<div class="title animated fadeIn" id="title">
     <br>
     <p><%= @post.title %></p>
     <hr>
 </div>    
 
-<div class="row">
+<div class="row animated fadeIn">
     <div class="col-xs-10  col-sm-10 col-lg-10 info">
         <em>Submitted <%= time_ago_in_words(@post.created_at) %> Ago , </em>
         <p><%= "#{@post.impressionist_count} views so far!" %></p> 
@@ -28,7 +28,7 @@
 
 
 
-<div class="row">
+<div class="row animated fadeIn">
     <div class="col-xs-12  col-sm-12 col-lg-12 ">
        <p><%= raw @post.content %></p>
        <br>
