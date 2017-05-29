@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     
     def index
         @posts = Post.search(params[:search]).order("CREATED_AT DESC")
-       
+        @view_count = Post.view_count(@posts)
     end
     
     def search

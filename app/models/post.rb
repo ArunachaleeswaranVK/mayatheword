@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
     
     has_many :comments ,dependent: :destroy
     acts_as_votable
-    is_impressionable
+    is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :all
     validates :title, presence: true, length: { minimum: 3}
     validates :summary, presence: true, length: { maximum: 600 }
     validates :content, presence: true
@@ -29,5 +29,9 @@ class Post < ActiveRecord::Base
         else
             all.order("CREATED_AT DESC")
         end 
-    end 
+    end
+    
+    def self.view_count(posts)
+        return posts.sum(:view_count)
+    end    
 end
