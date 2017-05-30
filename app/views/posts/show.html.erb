@@ -69,7 +69,9 @@
 <div class="row">
     <div class="col-xs-3  col-sm-3 col-lg-3 prev">
         <% if @previous %>
-            <%= link_to ("Previous post was , " + @previous.title), @previous %>
+            <%= link_to @previous do %>
+                <span class="glyphicon glyphicon-arrow-left"></span><span><%= @previous.title %></span>
+            <% end %>
         <% end %>
     </div>
     <div class="col-xs-6  col-sm-6 col-lg-6">
@@ -77,7 +79,9 @@
     </div>
     <div class="col-xs-3  col-sm-3 col-lg-3 next">
         <% if @next %>
-            <%= link_to ("Next post is , " + @next.title) , @next %>
+            <%= link_to @next do %>
+                <span><%= @next.title %></span><span class="glyphicon glyphicon-arrow-right"></span>
+            <% end %>
         <% end %>
     </div>
 </div>

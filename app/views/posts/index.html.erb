@@ -1,4 +1,7 @@
 <div id="banner">
+  <h1 class="banner-title">MAYA THE WORD</h1>
+  <div id="heroine-overlay"></div>
+  
 </div>
 
 
@@ -9,17 +12,16 @@
       <div class="row animated fadeIn">
           <div class="col-md-3 col-md-offset-1">
             <p><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-               Post -<%=  @posts.count %>
-            </p>
+               <span>Post - <strong><%=  @posts.count %></strong></span>
           </div>
           <div class="col-md-3">
             <p><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-               Like -<%= @like_count %>
+               <span>Like - <strong><%=  @like_count %></strong></span>
             </p>
           </div>
           <div class="col-md-3">
             <p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-              view -<%= @view_count %>
+              <span>View - <strong><%=  @view_count %></strong></span>
             </p>
           </div>
           
@@ -29,7 +31,8 @@
   <div class="container">
     <br>
     <br>
-    
+    <div class="section">
+      <h2 class="section-title">Latest Stories</h2>
     <% @posts.each do |post| %>
     
         <div class="row">
@@ -49,6 +52,7 @@
         <hr>
         <br>
     <% end %> 
+    </div>
     <footer>
       <div>
         <p><%= link_to "Back to Top" , "#content" , id: "top" %></p>

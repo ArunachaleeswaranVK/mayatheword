@@ -41,6 +41,15 @@ body {
     margin: 0px;
     
 }
+.banner-title{
+    color: aliceblue;
+    position: absolute;
+    font-size: 5em;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
 nav.navbar-inverse{
     height: 85px;
     font-size: 1.5em;
@@ -62,7 +71,10 @@ nav.navbar-inverse{
     
 }
 .navbar-brand{
-    font-size: 1.15em;
+    height: 4em;
+    width: 8em;
+    margin-top: -10px;
+    padding: 0px;
     transition: all ease .5s;
 }
 .navbar-inverse .navbar-brand{
@@ -71,10 +83,13 @@ nav.navbar-inverse{
 .navbar-inverse .navbar-nav > li > a {
   color: #ffffff;
 }
-
+.navbar-inverse .navbar-toggle{
+    border-color: transparent;
+    
+}
 #nav.shrink {
     height: 60px;
-    background-color: rgba(21, 19, 19, 0.9);
+    background-color: rgb(16, 47, 68);
     padding-top: 5px;
     // font-size: 1.20em;
     // font-family: serif;
@@ -103,6 +118,10 @@ nav.navbar-inverse{
     background-color: rgba(21, 19, 19, 0.9);
     transition: all ease .1s;
 }
+button .navbar-toggle{
+    background-color: #102f44;
+}
+
 
     
 }
@@ -117,6 +136,9 @@ nav.navbar-inverse{
     background-color: rgba(21, 19, 19, 0.9);
     transition: all ease .1s;
 }
+button .navbar-toggle{
+    background-color: #102f44;
+}
 
 
 
@@ -124,8 +146,11 @@ nav.navbar-inverse{
 
 #nav.shrink #logo {
    
-   font-size: 1.25em;
-   padding: 14px 0px 0px 0px;
+   height: 60px;
+    width: 135px;
+    padding: 0px;
+    margin-top: -5.30px;
+   
   transition: all ease .1s;
 }
 nav.shrink>li>a{
@@ -141,7 +166,19 @@ nav.shrink>li>a{
     text-align: center;
     color: aliceblue;
 }
-
+.section {
+    padding: 30px 0;
+    position: relative;
+    background-color: #FFFFFF;
+}
+.section-title {
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #999;
+}
 .post-title>a{
     
     font-size: 2em;
@@ -258,6 +295,7 @@ margin: 0 auto;
 
 #heroine{
     padding-top: 0px;
+    margin-top: -50px;
     background-image: image-url('cherry.jpg');
     background-size: cover;
     background-position: center center;
