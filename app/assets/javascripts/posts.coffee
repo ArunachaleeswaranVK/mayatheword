@@ -39,7 +39,7 @@ $ ->
 
 $(document).ready ->
   $(window).scroll ->
-    if $(document).scrollTop() > 10
+    if $(document).scrollTop() > 100
       $('#nav').addClass 'shrink'
     else
       $('#nav').removeClass 'shrink'

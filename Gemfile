@@ -27,6 +27,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'animate.css-rails', '~> 3.2.0'
 
+gem 'google-webfonts-rails', '~> 0.0.4'
+
 gem 'jquery-turbolinks', '~> 2.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
