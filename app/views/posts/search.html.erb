@@ -1,11 +1,14 @@
-<h1>search</h1>
 
 <div class="container">
     <br>
     <br>
-   
+   <h1 class="search">Search Results -</h1>
+   <hr>
+   <% if @posts.empty? %>
+       <h3 class="search">Sorry , Your search did not return any results</h3>
+   <% end %> 
     <% @posts.each do |post| %>
-    
+      
         <div class="row">
             <div class="col-xs-3 col-sm-6 col-lg-4 ">
               <span class="img"><%= link_to (image_tag post.image.url(:small)) , post %></span>
@@ -19,6 +22,7 @@
               </p>
             </div>
         </div>
+      
         <br>
         <hr>
         <br>

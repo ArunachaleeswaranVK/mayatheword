@@ -1,5 +1,5 @@
 <div id="banner">
-  <h1 class="banner-title">MAYA THE WORD</h1>
+  <h1 class="banner-title animated fadeIn">MAYA THE WORD</h1>
   <div id="heroine-overlay"></div>
   
 </div>
@@ -32,35 +32,56 @@
     <br>
     <br>
     <div class="section">
-      <h2 class="section-title">Latest Stories</h2>
+      <h2 class="section-title">I write my feelings down ....</h2>
     <% @posts.each do |post| %>
     
         <div class="row">
-            <div class="col-xs-3 col-sm-6 col-lg-4 ">
+            <p class="post-title"><%= link_to  post.title , post %><p>
+          <br>  
+            
+            
+            <div class="col-xs-2 col-sm-6 col-lg-4 ">
               <span class="img"><%= link_to (image_tag post.image.url(:small)) , post %></span>
             </div>
             <div class="clearfix visible-xs"></div>
-            <div class="col-xs-9 col-sm-6 col-lg-8 post-index ">  
-              <p class="post-title"><%= link_to  post.title , post %><p>
-              <p id="index-info"><%=  pluralize(post.get_upvotes.size, "Like")  +" " + "#{post.impressionist_count} Views "%></p>
+            <div class="col-xs-10 col-sm-6 col-lg-8 post-index ">  
+              
+              
               <p class="index-summary">
                 <%=  post.summary %>
+              </p>
+              <p class="read">
+                <%= link_to "Start Reading . . . " , post %> 
+              </p>
+              
+              <p class="index-info">
+                
+                  <%=  pluralize(post.get_upvotes.size, "Like")  +" / " + "#{post.impressionist_count} Views " + " /" + "#{post.comments.count} comments " %>
+                
               </p>
             </div>
         </div>
         <br>
         <hr>
         <br>
+        
     <% end %> 
     </div>
-    <footer>
+    <footer class="first">
       <div>
         <p><%= link_to "Back to Top" , "#content" , id: "top" %></p>
       </div>
     </footer>
+    
+    
+
   </div> 
+  
 
 </div>
+<footer class="second">
+    	<p class="second-footer-text">Made with<span class="glyphicon glyphicon-heart" aria-hidden="true"></span> for Maya</p>
+</footer>
 
 
 

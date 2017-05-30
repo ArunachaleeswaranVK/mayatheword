@@ -15,10 +15,10 @@
     <div class="col-xs-2  col-sm-2 col-lg-2">
         <% if current_user.try(:admin?) %>
             <%= link_to edit_post_path(@post) do %>
-                <i class="glyphicon glyphicon-pencil"></i>
+                <i class="glyphicon glyphicon-pencil"><strong>Edit</strong></i>
             <% end %> |
             <%= link_to post_path(@post), method: :delete , data: {confirm: "Are you sure , Cherry ?"} do %>
-                <i class="glyphicon glyphicon-trash"></i>
+                <i class="glyphicon glyphicon-trash"><strong>Delete</strong></i>
             <% end %> 
         <% end %> 
     </div>
@@ -90,7 +90,7 @@
 
 <div class="com l">
     <%= link_to "#" , id: "comments-link" do %>
-        <i class="glyphicon glyphicon-comment"></i><span><strong>View Comments</strong></span>
+        <i class="glyphicon glyphicon-comment"></i><span><strong>View Comments (<%= @post.comments.count %>)</strong></span>
     <% end %>
 </div>
     
