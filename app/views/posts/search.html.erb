@@ -1,35 +1,52 @@
-
-<div class="container">
+<body class="search-body">
+    <div class="container" id="s">
     <br>
     <br>
-   <h1 class="search">Search Results -</h1>
+   <h1 class="search animated fadeIn">Search Results -</h1>
    <hr>
    <% if @posts.empty? %>
-       <h3 class="search">Sorry , Your search did not return any results</h3>
+       <h3 class="search animated fadeIn">Sorry , Your search did not return any results</h3>
+       <h4 class="search animated fadeIn"><%= link_to "Home" , root_path %></h4>
    <% end %> 
     <% @posts.each do |post| %>
-      
-        <div class="row">
-            <div class="col-xs-3 col-sm-6 col-lg-4 ">
+    
+        <div class="row animated fadeIn">
+            <p class="post-title"><%= link_to  post.title , post %><p>
+          <br>  
+            
+            
+            <div class="col-xs-2 col-sm-6 col-lg-4 ">
               <span class="img"><%= link_to (image_tag post.image.url(:small)) , post %></span>
             </div>
             <div class="clearfix visible-xs"></div>
-            <div class="col-xs-9 col-sm-6 col-lg-8 ">  
-              <h3><%= link_to  post.title , post %></h3>
-              <p id="index-info"><%=  pluralize(post.get_upvotes.size, "Like")  +" " + "#{post.impressionist_count} Views "%></p>
-              <p>
+            <div class="col-xs-10 col-sm-6 col-lg-8 post-index ">  
+              
+              
+              <p class="index-summary">
                 <%=  post.summary %>
+              </p>
+              <p class="read">
+                <%= link_to "Start Reading . . . " , post %> 
+              </p>
+              
+              <p class="index-info">
+                
+                  <%=  pluralize(post.get_upvotes.size, "Like")  +" / " + "#{post.impressionist_count} Views " + " /" + "#{post.comments.count} comments " %>
+                
               </p>
             </div>
         </div>
-      
         <br>
         <hr>
         <br>
-    <% end %> 
-    <footer>
-      <div>
-        <p><%= link_to "Back to Top" , "#content" , id: "top" %></p>
-      </div>
-    </footer>
+        
+    <% end %>  
+    <% if @posts.count >2 %>
+        <footer class="first">
+          <div>
+            <p><%= link_to "Back to Top" , "#s" , id: "top" %></p>
+          </div>
+        </footer>
+    <% end %>    
   </div>
+</body>
